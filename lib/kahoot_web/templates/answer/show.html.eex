@@ -1,0 +1,33 @@
+<h1>Show Answer</h1>
+
+<ul>
+
+  <li>
+    <strong>Owner:</strong>
+    <%= @answer.owner %>
+  </li>
+
+  <li>
+    <strong>Prop1:</strong>
+    <%= @answer.prop1 %>
+  </li>
+
+  <li>
+    <strong>Prop2:</strong>
+    <%= @answer.prop2 %>
+  </li>
+
+  <li>
+    <strong>Prop3:</strong>
+    <%= @answer.prop3 %>
+  </li>
+
+  <li>
+    <strong>Prop4:</strong>
+    <%= @answer.prop4 %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.answer_path(@conn, :edit, @answer) %></span>
+<span><%= link "Back", to: Routes.answer_path(@conn, :index) %></span>

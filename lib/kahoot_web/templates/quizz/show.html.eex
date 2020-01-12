@@ -1,0 +1,18 @@
+<h1>Show Quizz</h1>
+
+<ul>
+
+  <li>
+    <strong>Owner:</strong>
+    <%= @quizz.owner %>
+  </li>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @quizz.name %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.quizz_path(@conn, :edit, @quizz) %></span>
+<span><%= link "Back", to: Routes.quizz_path(@conn, :index) %></span>

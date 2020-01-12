@@ -1,0 +1,33 @@
+<h1>Show Question</h1>
+
+<ul>
+
+  <li>
+    <strong>Title:</strong>
+    <%= @question.title %>
+  </li>
+
+  <li>
+    <strong>Prop1:</strong>
+    <%= @question.prop1 %>
+  </li>
+
+  <li>
+    <strong>Prop2:</strong>
+    <%= @question.prop2 %>
+  </li>
+
+  <li>
+    <strong>Prop3:</strong>
+    <%= @question.prop3 %>
+  </li>
+
+  <li>
+    <strong>Prop4:</strong>
+    <%= @question.prop4 %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.question_path(@conn, :edit, @quizz_id, @question) %></span>
+<span><%= link "Back", to: Routes.question_path(@conn, :index, @quizz_id) %></span>

@@ -1,0 +1,5 @@
+<h1>Edit Quizz</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.quizz_path(@conn, :update, @quizz)) %>
+
+<span><%= link "Back", to: Routes.quizz_path(@conn, :index) %></span>

@@ -1,0 +1,33 @@
+<h1>Listing Quizzes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>Owner</th>
+      <th>Name</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for quizz <- @quizzes do %>
+    <tr>
+      <td><%= quizz.id %></td>
+      <td><%= quizz.owner %></td>
+      <td><%= quizz.name %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.quizz_path(@conn, :show, quizz) %></span>
+        <span><%= link "Edit", to: Routes.quizz_path(@conn, :edit, quizz) %></span>
+        <span><%= link "Delete", to: Routes.quizz_path(@conn, :delete, quizz), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+      <td>
+        <span><%= link "questions", to: Routes.question_path(@conn, :index, quizz.id) %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Quizz", to: Routes.quizz_path(@conn, :new) %></span>
