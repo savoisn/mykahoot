@@ -1,5 +1,7 @@
 # Kahoot
 
+Phoenix Project to demo Elixir Phoenix and Liveviews in 3 hours :D
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
